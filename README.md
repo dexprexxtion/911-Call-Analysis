@@ -1,11 +1,10 @@
 # 911 Call Analysis
 
-# 911 Call Analysis
-
 A simple Class 12 project dashboard built with Python and Tkinter. It loads a
-small fictional 911-call dataset from `data/911_calls.csv` into a pandas
-DataFrame. The chart panels are placeholders for the analysis features to be
-added next.
+fictional dataset of 50 911-call incidents from `data/911_calls.csv` into a
+pandas DataFrame. Select a location in the sidebar and click **Analyze** to
+view the call-type bar chart and hourly line chart. Use **Previous** and
+**Next** to switch between charts.
 
 ## Run the app
 
@@ -16,6 +15,5 @@ added next.
 Tkinter is included with most standard Python installations. If it is missing,
 install the Tk support package provided for your Python distribution.
 
-Resize the window as needed. Use the **Enter Full Screen** button or press F11
-to toggle fullscreen; press Escape to return to the windowed view. The sample
-records are fictional and are for demonstrating the program only.
+Resize or maximize the window as needed. The sample records are fictional and
+are for demonstrating the program only.
