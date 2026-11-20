@@ -1,51 +1,701 @@
-Date,Location,Call_Type,Call_Time
-2026-01-01,North Loop,Medical Emergency,00:15
-2026-01-02,Chelsea,Traffic Accident,01:40
-2026-01-03,Station,Noise Complaint,02:05
-2026-01-04,Central,Theft,03:20
-2026-01-05,Downtown,Medical Emergency,04:30
-2026-01-06,Bel Air,Fire,05:45
-2026-01-07,Brookhaven,Traffic Accident,06:10
-2026-01-08,North Loop,Noise Complaint,07:15
-2026-01-09,Chelsea,Medical Emergency,08:25
-2026-01-10,Station,Fire,09:50
-2026-01-11,Central,Theft,10:35
-2026-01-12,Downtown,Traffic Accident,11:20
-2026-01-13,Bel Air,Noise Complaint,12:05
-2026-01-14,Brookhaven,Medical Emergency,13:40
-2026-01-15,North Loop,Fire,14:15
-2026-01-16,Chelsea,Theft,15:30
-2026-01-17,Station,Traffic Accident,16:55
-2026-01-18,Central,Medical Emergency,17:10
-2026-01-19,Downtown,Noise Complaint,18:25
-2026-01-20,Bel Air,Traffic Accident,19:40
-2026-01-21,Brookhaven,Fire,20:15
-2026-01-22,North Loop,Theft,21:30
-2026-01-23,Chelsea,Medical Emergency,22:45
-2026-01-24,Station,Noise Complaint,23:20
-2026-01-25,Central,Fire,00:50
-2026-01-26,Downtown,Theft,01:25
-2026-01-27,Bel Air,Medical Emergency,02:40
-2026-01-28,Brookhaven,Traffic Accident,03:55
-2026-01-29,North Loop,Noise Complaint,04:10
-2026-01-30,Chelsea,Fire,05:35
-2026-01-31,Station,Medical Emergency,06:50
-2026-02-01,Central,Traffic Accident,07:05
-2026-02-02,Downtown,Noise Complaint,08:30
-2026-02-03,Bel Air,Theft,09:45
-2026-02-04,Brookhaven,Medical Emergency,10:20
-2026-02-05,North Loop,Traffic Accident,11:35
-2026-02-06,Chelsea,Noise Complaint,12:50
-2026-02-07,Station,Theft,13:15
-2026-02-08,Central,Medical Emergency,14:40
-2026-02-09,Downtown,Fire,15:55
-2026-02-10,Bel Air,Traffic Accident,16:30
-2026-02-11,Brookhaven,Noise Complaint,17:45
-2026-02-12,North Loop,Medical Emergency,18:05
-2026-02-13,Chelsea,Theft,19:20
-2026-02-14,Station,Traffic Accident,20:35
-2026-02-15,Central,Noise Complaint,21:50
-2026-02-16,Downtown,Medical Emergency,22:10
-2026-02-17,Bel Air,Fire,23:25
-2026-02-18,Brookhaven,Theft,08:45
-2026-02-19,North Loop,Traffic Accident,17:30
+Date,Location,Call_Type,Call_Time,Service_Dispatched
+2026-01-01,Bel Air,Theft,01:54,Police
+2026-01-01,Brookhaven,Noise Complaint,03:48,Police
+2026-01-01,North Loop,Theft,09:20,Police
+2026-01-01,Central,Fire,10:25,Fire
+2026-01-01,Central,Traffic Accident,11:15,Police
+2026-01-01,Central,Traffic Accident,11:24,Police
+2026-01-01,Central,Traffic Accident,11:52,Police
+2026-01-01,North Loop,Theft,12:29,Police
+2026-01-01,Downtown,Theft,13:49,Police
+2026-01-01,Chelsea,Medical Emergency,15:14,Medical
+2026-01-01,Bel Air,Traffic Accident,16:07,Police
+2026-01-01,Station,Traffic Accident,17:21,Police
+2026-01-01,Bel Air,Medical Emergency,17:40,Medical
+2026-01-01,Downtown,Noise Complaint,19:34,Police
+2026-01-01,Downtown,Disturbance,20:26,Police
+2026-01-02,Brookhaven,Welfare Check,07:10,Medical
+2026-01-02,North Loop,Theft,11:09,Police
+2026-01-02,North Loop,Fire,11:35,Fire
+2026-01-02,North Loop,Traffic Accident,12:42,Police
+2026-01-02,Central,Disturbance,12:43,Police
+2026-01-02,Central,Theft,13:07,Police
+2026-01-02,North Loop,Medical Emergency,13:32,Medical
+2026-01-02,North Loop,Fire,14:25,Fire
+2026-01-02,Chelsea,Disturbance,17:30,Police
+2026-01-02,Downtown,Noise Complaint,23:04,Police
+2026-01-03,Central,Traffic Accident,07:30,Police
+2026-01-03,Chelsea,Traffic Accident,09:28,Police
+2026-01-03,Chelsea,Disturbance,09:58,Police
+2026-01-03,Central,Noise Complaint,10:07,Police
+2026-01-03,Brookhaven,Medical Emergency,11:15,Medical
+2026-01-03,North Loop,Medical Emergency,12:35,Medical
+2026-01-03,North Loop,Theft,12:57,Police
+2026-01-03,Central,Theft,15:40,Police
+2026-01-03,Central,Theft,16:27,Police
+2026-01-03,Brookhaven,Theft,20:45,Police
+2026-01-03,Downtown,Disturbance,21:43,Police
+2026-01-04,Central,Fire,07:19,Fire
+2026-01-04,Bel Air,Theft,08:58,Police
+2026-01-04,Central,Traffic Accident,09:24,Police
+2026-01-04,Central,Welfare Check,11:54,Medical
+2026-01-04,Downtown,Traffic Accident,12:56,Police
+2026-01-04,Bel Air,Medical Emergency,15:29,Medical
+2026-01-04,Station,Medical Emergency,18:18,Medical
+2026-01-04,Brookhaven,Traffic Accident,18:41,Police
+2026-01-04,Brookhaven,Medical Emergency,18:45,Medical
+2026-01-04,Downtown,Disturbance,20:03,Police
+2026-01-05,Brookhaven,Welfare Check,00:52,Medical
+2026-01-05,Chelsea,Fire,07:15,Fire
+2026-01-05,Bel Air,Theft,08:32,Police
+2026-01-05,Bel Air,Theft,09:45,Police
+2026-01-05,Downtown,Traffic Accident,10:30,Police
+2026-01-05,Chelsea,Medical Emergency,12:43,Medical
+2026-01-05,North Loop,Medical Emergency,13:16,Medical
+2026-01-05,Bel Air,Noise Complaint,16:40,Police
+2026-01-05,Brookhaven,Welfare Check,16:40,Medical
+2026-01-05,Chelsea,Traffic Accident,16:55,Police
+2026-01-05,North Loop,Theft,20:44,Police
+2026-01-06,Station,Traffic Accident,00:57,Police
+2026-01-06,Brookhaven,Traffic Accident,02:08,Police
+2026-01-06,Station,Medical Emergency,07:05,Medical
+2026-01-06,Brookhaven,Traffic Accident,08:55,Police
+2026-01-06,Central,Welfare Check,09:43,Medical
+2026-01-06,Station,Traffic Accident,09:52,Police
+2026-01-06,North Loop,Welfare Check,12:08,Medical
+2026-01-06,Downtown,Noise Complaint,12:12,Police
+2026-01-06,Central,Noise Complaint,12:50,Police
+2026-01-06,Station,Medical Emergency,15:59,Medical
+2026-01-06,Bel Air,Medical Emergency,16:35,Medical
+2026-01-06,Chelsea,Medical Emergency,17:13,Medical
+2026-01-06,Downtown,Disturbance,17:33,Police
+2026-01-06,Bel Air,Theft,17:44,Police
+2026-01-06,Brookhaven,Noise Complaint,18:04,Police
+2026-01-06,Brookhaven,Fire,20:48,Fire
+2026-01-07,Downtown,Theft,00:12,Police
+2026-01-07,Downtown,Disturbance,04:45,Police
+2026-01-07,Chelsea,Noise Complaint,06:00,Police
+2026-01-07,Bel Air,Traffic Accident,07:37,Police
+2026-01-07,Brookhaven,Noise Complaint,08:06,Police
+2026-01-07,Brookhaven,Medical Emergency,08:08,Medical
+2026-01-07,Central,Noise Complaint,10:58,Police
+2026-01-07,North Loop,Welfare Check,12:16,Medical
+2026-01-07,Brookhaven,Disturbance,16:03,Police
+2026-01-07,Brookhaven,Welfare Check,16:17,Medical
+2026-01-07,Bel Air,Noise Complaint,17:52,Police
+2026-01-07,Bel Air,Fire,17:53,Fire
+2026-01-07,Downtown,Medical Emergency,21:55,Medical
+2026-01-08,Central,Traffic Accident,04:23,Police
+2026-01-08,Central,Welfare Check,05:17,Medical
+2026-01-08,Station,Theft,07:12,Police
+2026-01-08,Central,Fire,08:11,Fire
+2026-01-08,Brookhaven,Traffic Accident,09:48,Police
+2026-01-08,Central,Fire,10:19,Fire
+2026-01-08,Chelsea,Noise Complaint,14:35,Police
+2026-01-08,Bel Air,Disturbance,15:04,Police
+2026-01-08,Central,Disturbance,21:40,Police
+2026-01-09,Station,Medical Emergency,04:50,Medical
+2026-01-09,Bel Air,Disturbance,07:45,Police
+2026-01-09,Bel Air,Noise Complaint,08:26,Police
+2026-01-09,Station,Fire,08:52,Fire
+2026-01-09,Downtown,Fire,10:32,Fire
+2026-01-09,North Loop,Traffic Accident,12:24,Police
+2026-01-09,North Loop,Disturbance,12:36,Police
+2026-01-09,North Loop,Medical Emergency,13:56,Medical
+2026-01-09,Central,Traffic Accident,15:34,Police
+2026-01-09,Bel Air,Fire,15:58,Fire
+2026-01-09,Brookhaven,Welfare Check,18:51,Medical
+2026-01-09,Downtown,Medical Emergency,20:02,Medical
+2026-01-09,Chelsea,Medical Emergency,21:48,Medical
+2026-01-10,Brookhaven,Disturbance,06:08,Police
+2026-01-10,Bel Air,Theft,08:00,Police
+2026-01-10,North Loop,Medical Emergency,11:54,Medical
+2026-01-10,Downtown,Welfare Check,12:50,Medical
+2026-01-10,Downtown,Disturbance,13:12,Police
+2026-01-10,Chelsea,Theft,15:57,Police
+2026-01-10,Chelsea,Medical Emergency,18:10,Medical
+2026-01-10,Bel Air,Noise Complaint,19:08,Police
+2026-01-10,Bel Air,Medical Emergency,23:24,Medical
+2026-01-11,Station,Noise Complaint,06:06,Police
+2026-01-11,Station,Traffic Accident,07:56,Police
+2026-01-11,Bel Air,Theft,08:11,Police
+2026-01-11,Central,Noise Complaint,08:11,Police
+2026-01-11,Bel Air,Medical Emergency,09:23,Medical
+2026-01-11,Chelsea,Noise Complaint,09:46,Police
+2026-01-11,Downtown,Welfare Check,11:39,Medical
+2026-01-11,North Loop,Theft,11:45,Police
+2026-01-11,Bel Air,Noise Complaint,12:45,Police
+2026-01-11,Central,Welfare Check,15:22,Medical
+2026-01-11,Bel Air,Noise Complaint,15:50,Police
+2026-01-11,Brookhaven,Traffic Accident,17:33,Police
+2026-01-11,Chelsea,Fire,17:38,Fire
+2026-01-11,Downtown,Disturbance,17:43,Police
+2026-01-11,Bel Air,Disturbance,17:51,Police
+2026-01-11,Station,Noise Complaint,18:58,Police
+2026-01-11,Downtown,Fire,21:44,Fire
+2026-01-11,Station,Fire,22:30,Fire
+2026-01-11,Bel Air,Welfare Check,23:03,Medical
+2026-01-12,Station,Medical Emergency,07:25,Medical
+2026-01-12,Station,Welfare Check,08:11,Medical
+2026-01-12,Bel Air,Medical Emergency,08:54,Medical
+2026-01-12,Bel Air,Noise Complaint,09:56,Police
+2026-01-12,Downtown,Medical Emergency,12:13,Medical
+2026-01-12,North Loop,Traffic Accident,12:27,Police
+2026-01-12,North Loop,Noise Complaint,14:00,Police
+2026-01-12,North Loop,Traffic Accident,14:05,Police
+2026-01-12,Bel Air,Theft,22:52,Police
+2026-01-13,Chelsea,Disturbance,07:32,Police
+2026-01-13,Station,Noise Complaint,07:44,Police
+2026-01-13,Station,Traffic Accident,09:44,Police
+2026-01-13,Central,Medical Emergency,09:55,Medical
+2026-01-13,Central,Medical Emergency,11:50,Medical
+2026-01-13,Station,Noise Complaint,16:20,Police
+2026-01-13,Chelsea,Medical Emergency,16:57,Medical
+2026-01-13,Bel Air,Noise Complaint,18:14,Police
+2026-01-13,Brookhaven,Fire,22:31,Fire
+2026-01-14,Brookhaven,Traffic Accident,06:13,Police
+2026-01-14,Bel Air,Welfare Check,10:31,Medical
+2026-01-14,Central,Medical Emergency,11:12,Medical
+2026-01-14,North Loop,Theft,13:30,Police
+2026-01-14,Bel Air,Theft,17:37,Police
+2026-01-14,Station,Welfare Check,18:30,Medical
+2026-01-14,North Loop,Medical Emergency,20:19,Medical
+2026-01-15,Central,Noise Complaint,02:05,Police
+2026-01-15,Brookhaven,Theft,05:21,Police
+2026-01-15,Station,Medical Emergency,06:16,Medical
+2026-01-15,North Loop,Medical Emergency,11:04,Medical
+2026-01-15,North Loop,Traffic Accident,12:24,Police
+2026-01-15,North Loop,Welfare Check,12:36,Medical
+2026-01-15,North Loop,Theft,12:56,Police
+2026-01-15,North Loop,Traffic Accident,14:39,Police
+2026-01-15,Brookhaven,Medical Emergency,15:18,Medical
+2026-01-15,Bel Air,Welfare Check,16:52,Medical
+2026-01-15,North Loop,Medical Emergency,16:54,Medical
+2026-01-15,Bel Air,Medical Emergency,17:16,Medical
+2026-01-15,Brookhaven,Medical Emergency,19:33,Medical
+2026-01-15,Chelsea,Theft,19:59,Police
+2026-01-15,Downtown,Medical Emergency,20:02,Medical
+2026-01-16,Station,Traffic Accident,06:22,Police
+2026-01-16,Brookhaven,Traffic Accident,06:23,Police
+2026-01-16,Central,Fire,06:23,Fire
+2026-01-16,North Loop,Traffic Accident,07:58,Police
+2026-01-16,Brookhaven,Theft,09:43,Police
+2026-01-16,Central,Fire,09:52,Fire
+2026-01-16,Central,Disturbance,10:41,Police
+2026-01-16,North Loop,Noise Complaint,11:12,Police
+2026-01-16,Bel Air,Theft,11:35,Police
+2026-01-16,North Loop,Theft,13:03,Police
+2026-01-16,Station,Disturbance,14:06,Police
+2026-01-16,Downtown,Noise Complaint,14:36,Police
+2026-01-16,Bel Air,Welfare Check,16:45,Medical
+2026-01-16,Bel Air,Welfare Check,16:46,Medical
+2026-01-16,Chelsea,Theft,17:20,Police
+2026-01-16,Brookhaven,Noise Complaint,18:27,Police
+2026-01-16,Downtown,Traffic Accident,21:07,Police
+2026-01-16,Station,Medical Emergency,21:51,Medical
+2026-01-17,Bel Air,Welfare Check,00:40,Medical
+2026-01-17,North Loop,Medical Emergency,13:49,Medical
+2026-01-17,North Loop,Traffic Accident,14:59,Police
+2026-01-17,Station,Traffic Accident,16:03,Police
+2026-01-17,Chelsea,Noise Complaint,17:12,Police
+2026-01-17,Bel Air,Medical Emergency,18:20,Medical
+2026-01-17,Station,Noise Complaint,18:47,Police
+2026-01-17,Bel Air,Medical Emergency,21:57,Medical
+2026-01-18,Station,Medical Emergency,07:43,Medical
+2026-01-18,Station,Medical Emergency,08:07,Medical
+2026-01-18,North Loop,Theft,15:46,Police
+2026-01-18,Central,Medical Emergency,15:52,Medical
+2026-01-18,Station,Theft,16:18,Police
+2026-01-18,Central,Traffic Accident,16:46,Police
+2026-01-18,Brookhaven,Fire,18:54,Fire
+2026-01-18,Chelsea,Welfare Check,22:27,Medical
+2026-01-18,Central,Medical Emergency,23:19,Medical
+2026-01-19,Chelsea,Medical Emergency,02:43,Medical
+2026-01-19,Bel Air,Medical Emergency,08:22,Medical
+2026-01-19,Central,Medical Emergency,10:29,Medical
+2026-01-19,Chelsea,Noise Complaint,12:41,Police
+2026-01-19,Station,Noise Complaint,14:24,Police
+2026-01-19,Central,Theft,14:33,Police
+2026-01-19,Central,Welfare Check,16:02,Medical
+2026-01-19,Chelsea,Traffic Accident,16:09,Police
+2026-01-19,Brookhaven,Fire,18:55,Fire
+2026-01-20,Chelsea,Welfare Check,08:04,Medical
+2026-01-20,Central,Traffic Accident,10:38,Police
+2026-01-20,North Loop,Medical Emergency,12:11,Medical
+2026-01-20,Chelsea,Medical Emergency,16:44,Medical
+2026-01-20,Station,Disturbance,18:25,Police
+2026-01-20,Downtown,Medical Emergency,18:30,Medical
+2026-01-20,Downtown,Theft,19:12,Police
+2026-01-20,Bel Air,Welfare Check,21:44,Medical
+2026-01-20,North Loop,Medical Emergency,21:45,Medical
+2026-01-21,Downtown,Traffic Accident,01:40,Police
+2026-01-21,Downtown,Noise Complaint,07:00,Police
+2026-01-21,Central,Disturbance,08:16,Police
+2026-01-21,Station,Medical Emergency,09:11,Medical
+2026-01-21,North Loop,Medical Emergency,12:47,Medical
+2026-01-21,North Loop,Fire,14:49,Fire
+2026-01-21,Station,Medical Emergency,16:01,Medical
+2026-01-21,Bel Air,Theft,16:48,Police
+2026-01-21,Chelsea,Welfare Check,18:48,Medical
+2026-01-21,Chelsea,Welfare Check,19:23,Medical
+2026-01-21,North Loop,Traffic Accident,21:55,Police
+2026-01-22,Bel Air,Medical Emergency,03:17,Medical
+2026-01-22,Brookhaven,Medical Emergency,06:08,Medical
+2026-01-22,Brookhaven,Disturbance,07:15,Police
+2026-01-22,North Loop,Theft,12:52,Police
+2026-01-22,Central,Welfare Check,13:18,Medical
+2026-01-22,North Loop,Traffic Accident,14:46,Police
+2026-01-22,Brookhaven,Medical Emergency,15:50,Medical
+2026-01-22,Central,Medical Emergency,15:50,Medical
+2026-01-22,Brookhaven,Theft,16:06,Police
+2026-01-22,Station,Traffic Accident,16:17,Police
+2026-01-22,Downtown,Medical Emergency,18:09,Medical
+2026-01-22,Brookhaven,Fire,19:41,Fire
+2026-01-22,Downtown,Noise Complaint,21:45,Police
+2026-01-22,North Loop,Theft,23:04,Police
+2026-01-23,Downtown,Welfare Check,07:26,Medical
+2026-01-23,Station,Welfare Check,07:53,Medical
+2026-01-23,Chelsea,Disturbance,07:59,Police
+2026-01-23,Chelsea,Medical Emergency,08:22,Medical
+2026-01-23,Chelsea,Traffic Accident,09:22,Police
+2026-01-23,Chelsea,Fire,11:38,Fire
+2026-01-23,Central,Noise Complaint,12:14,Police
+2026-01-23,Downtown,Traffic Accident,13:52,Police
+2026-01-23,Bel Air,Theft,15:23,Police
+2026-01-23,Bel Air,Welfare Check,16:18,Medical
+2026-01-23,Brookhaven,Fire,16:40,Fire
+2026-01-23,Downtown,Traffic Accident,18:25,Police
+2026-01-23,Bel Air,Theft,22:14,Police
+2026-01-24,Chelsea,Noise Complaint,00:24,Police
+2026-01-24,North Loop,Theft,00:48,Police
+2026-01-24,North Loop,Fire,03:50,Fire
+2026-01-24,Chelsea,Fire,06:57,Fire
+2026-01-24,Station,Noise Complaint,07:54,Police
+2026-01-24,Bel Air,Fire,08:23,Fire
+2026-01-24,Chelsea,Theft,09:20,Police
+2026-01-24,Central,Noise Complaint,10:08,Police
+2026-01-24,Downtown,Fire,12:44,Fire
+2026-01-24,North Loop,Medical Emergency,13:08,Medical
+2026-01-24,Bel Air,Medical Emergency,14:29,Medical
+2026-01-24,Brookhaven,Fire,17:34,Fire
+2026-01-24,Downtown,Theft,18:14,Police
+2026-01-25,Chelsea,Fire,07:24,Fire
+2026-01-25,Station,Disturbance,08:07,Police
+2026-01-25,Bel Air,Medical Emergency,08:41,Medical
+2026-01-25,Bel Air,Medical Emergency,09:02,Medical
+2026-01-25,North Loop,Welfare Check,09:15,Medical
+2026-01-25,North Loop,Traffic Accident,11:34,Police
+2026-01-25,North Loop,Disturbance,12:46,Police
+2026-01-25,Central,Theft,14:20,Police
+2026-01-25,Brookhaven,Welfare Check,17:03,Medical
+2026-01-25,Downtown,Medical Emergency,22:39,Medical
+2026-01-26,Chelsea,Medical Emergency,02:35,Medical
+2026-01-26,Station,Traffic Accident,05:09,Police
+2026-01-26,Station,Medical Emergency,05:11,Medical
+2026-01-26,Station,Disturbance,06:44,Police
+2026-01-26,Chelsea,Welfare Check,07:23,Medical
+2026-01-26,Bel Air,Traffic Accident,07:29,Police
+2026-01-26,Chelsea,Medical Emergency,08:16,Medical
+2026-01-26,North Loop,Medical Emergency,10:28,Medical
+2026-01-26,Central,Fire,11:03,Fire
+2026-01-26,Central,Fire,14:07,Fire
+2026-01-26,Station,Traffic Accident,15:55,Police
+2026-01-26,Bel Air,Welfare Check,15:56,Medical
+2026-01-26,Downtown,Noise Complaint,19:36,Police
+2026-01-27,Chelsea,Traffic Accident,03:52,Police
+2026-01-27,Brookhaven,Disturbance,06:20,Police
+2026-01-27,Station,Traffic Accident,08:17,Police
+2026-01-27,Central,Medical Emergency,09:08,Medical
+2026-01-27,Central,Theft,09:58,Police
+2026-01-27,Downtown,Noise Complaint,10:18,Police
+2026-01-27,Central,Medical Emergency,16:53,Medical
+2026-01-27,Downtown,Medical Emergency,20:21,Medical
+2026-01-28,Brookhaven,Medical Emergency,06:23,Medical
+2026-01-28,Chelsea,Theft,08:16,Police
+2026-01-28,North Loop,Disturbance,10:32,Police
+2026-01-28,North Loop,Theft,11:42,Police
+2026-01-28,North Loop,Disturbance,12:33,Police
+2026-01-28,Chelsea,Medical Emergency,14:37,Medical
+2026-01-28,Station,Disturbance,14:41,Police
+2026-01-28,Downtown,Welfare Check,15:43,Medical
+2026-01-28,Brookhaven,Noise Complaint,17:20,Police
+2026-01-28,Station,Medical Emergency,17:37,Medical
+2026-01-29,Brookhaven,Medical Emergency,01:39,Medical
+2026-01-29,Station,Theft,06:41,Police
+2026-01-29,Station,Medical Emergency,07:21,Medical
+2026-01-29,North Loop,Medical Emergency,07:35,Medical
+2026-01-29,Brookhaven,Traffic Accident,09:36,Police
+2026-01-29,North Loop,Medical Emergency,12:07,Medical
+2026-01-29,Chelsea,Medical Emergency,15:22,Medical
+2026-01-29,Brookhaven,Fire,16:04,Fire
+2026-01-30,Downtown,Disturbance,05:46,Police
+2026-01-30,Chelsea,Theft,07:39,Police
+2026-01-30,Station,Noise Complaint,08:45,Police
+2026-01-30,Brookhaven,Medical Emergency,08:47,Medical
+2026-01-30,Chelsea,Disturbance,09:03,Police
+2026-01-30,Central,Traffic Accident,13:55,Police
+2026-01-30,North Loop,Noise Complaint,14:35,Police
+2026-01-30,Station,Disturbance,15:40,Police
+2026-01-30,Chelsea,Welfare Check,17:01,Medical
+2026-01-30,Downtown,Medical Emergency,20:40,Medical
+2026-01-30,Downtown,Disturbance,22:56,Police
+2026-01-31,Central,Medical Emergency,03:47,Medical
+2026-01-31,Station,Theft,09:44,Police
+2026-01-31,Central,Noise Complaint,09:54,Police
+2026-01-31,North Loop,Medical Emergency,11:09,Medical
+2026-01-31,Brookhaven,Fire,12:23,Fire
+2026-01-31,Brookhaven,Theft,14:14,Police
+2026-01-31,Downtown,Welfare Check,14:45,Medical
+2026-01-31,Chelsea,Theft,17:08,Police
+2026-01-31,Brookhaven,Noise Complaint,18:50,Police
+2026-02-01,Brookhaven,Noise Complaint,07:22,Police
+2026-02-01,Chelsea,Medical Emergency,08:45,Medical
+2026-02-01,Station,Traffic Accident,09:17,Police
+2026-02-01,North Loop,Theft,13:01,Police
+2026-02-01,Chelsea,Traffic Accident,15:52,Police
+2026-02-01,Bel Air,Noise Complaint,18:37,Police
+2026-02-01,Downtown,Theft,21:44,Police
+2026-02-02,Station,Traffic Accident,03:46,Police
+2026-02-02,Station,Medical Emergency,07:51,Medical
+2026-02-02,Station,Welfare Check,09:16,Medical
+2026-02-02,Downtown,Disturbance,09:39,Police
+2026-02-02,Station,Medical Emergency,09:51,Medical
+2026-02-02,Central,Traffic Accident,10:26,Police
+2026-02-02,Downtown,Welfare Check,13:04,Medical
+2026-02-02,Brookhaven,Traffic Accident,14:40,Police
+2026-02-02,Station,Fire,14:50,Fire
+2026-02-02,Downtown,Fire,16:08,Fire
+2026-02-02,Central,Welfare Check,16:38,Medical
+2026-02-02,Downtown,Medical Emergency,18:14,Medical
+2026-02-02,Central,Theft,19:56,Police
+2026-02-02,Downtown,Medical Emergency,22:43,Medical
+2026-02-03,Bel Air,Fire,00:27,Fire
+2026-02-03,Central,Welfare Check,09:34,Medical
+2026-02-03,Brookhaven,Medical Emergency,11:05,Medical
+2026-02-03,Central,Traffic Accident,13:15,Police
+2026-02-03,Station,Noise Complaint,16:27,Police
+2026-02-03,Brookhaven,Noise Complaint,17:01,Police
+2026-02-03,Chelsea,Traffic Accident,17:01,Police
+2026-02-03,Brookhaven,Traffic Accident,17:57,Police
+2026-02-03,Chelsea,Noise Complaint,18:20,Police
+2026-02-04,Bel Air,Noise Complaint,00:04,Police
+2026-02-04,Chelsea,Medical Emergency,00:12,Medical
+2026-02-04,Brookhaven,Welfare Check,08:24,Medical
+2026-02-04,Chelsea,Fire,08:59,Fire
+2026-02-04,Downtown,Fire,09:22,Fire
+2026-02-04,Chelsea,Welfare Check,10:04,Medical
+2026-02-04,North Loop,Disturbance,10:20,Police
+2026-02-04,North Loop,Fire,10:48,Fire
+2026-02-04,Central,Traffic Accident,11:04,Police
+2026-02-04,Downtown,Disturbance,12:00,Police
+2026-02-04,North Loop,Traffic Accident,13:54,Police
+2026-02-04,Bel Air,Medical Emergency,16:17,Medical
+2026-02-04,Station,Welfare Check,16:24,Medical
+2026-02-04,Downtown,Medical Emergency,17:24,Medical
+2026-02-04,North Loop,Disturbance,17:54,Police
+2026-02-04,Chelsea,Theft,18:19,Police
+2026-02-04,Downtown,Traffic Accident,20:50,Police
+2026-02-04,Downtown,Fire,21:32,Fire
+2026-02-04,North Loop,Medical Emergency,22:21,Medical
+2026-02-04,Chelsea,Disturbance,22:45,Police
+2026-02-04,Brookhaven,Welfare Check,22:58,Medical
+2026-02-05,Chelsea,Noise Complaint,05:08,Police
+2026-02-05,Central,Medical Emergency,09:38,Medical
+2026-02-05,Central,Welfare Check,12:41,Medical
+2026-02-05,Bel Air,Welfare Check,16:12,Medical
+2026-02-05,Downtown,Medical Emergency,17:49,Medical
+2026-02-05,Downtown,Welfare Check,20:25,Medical
+2026-02-06,Chelsea,Theft,11:00,Police
+2026-02-06,Central,Welfare Check,11:23,Medical
+2026-02-06,Central,Medical Emergency,13:00,Medical
+2026-02-06,North Loop,Medical Emergency,13:15,Medical
+2026-02-06,Brookhaven,Noise Complaint,16:17,Police
+2026-02-06,Station,Medical Emergency,17:07,Medical
+2026-02-06,Downtown,Medical Emergency,19:57,Medical
+2026-02-06,Downtown,Traffic Accident,20:25,Police
+2026-02-07,Brookhaven,Noise Complaint,07:44,Police
+2026-02-07,Chelsea,Traffic Accident,08:46,Police
+2026-02-07,Station,Welfare Check,10:01,Medical
+2026-02-07,North Loop,Traffic Accident,10:08,Police
+2026-02-07,Station,Medical Emergency,10:19,Medical
+2026-02-07,Central,Noise Complaint,12:41,Police
+2026-02-07,Downtown,Disturbance,12:48,Police
+2026-02-07,Chelsea,Traffic Accident,16:25,Police
+2026-02-07,Station,Medical Emergency,19:10,Medical
+2026-02-08,North Loop,Medical Emergency,06:12,Medical
+2026-02-08,Bel Air,Theft,06:39,Police
+2026-02-08,Station,Noise Complaint,06:53,Police
+2026-02-08,Station,Welfare Check,09:23,Medical
+2026-02-08,Bel Air,Disturbance,09:59,Police
+2026-02-08,Chelsea,Theft,12:16,Police
+2026-02-08,North Loop,Medical Emergency,12:33,Medical
+2026-02-08,Brookhaven,Theft,14:29,Police
+2026-02-08,Central,Disturbance,15:38,Police
+2026-02-08,Chelsea,Medical Emergency,16:37,Medical
+2026-02-08,Chelsea,Noise Complaint,18:02,Police
+2026-02-08,Chelsea,Noise Complaint,18:56,Police
+2026-02-08,Chelsea,Traffic Accident,19:36,Police
+2026-02-08,Downtown,Welfare Check,19:51,Medical
+2026-02-08,Downtown,Fire,20:28,Fire
+2026-02-08,Bel Air,Traffic Accident,22:37,Police
+2026-02-09,Chelsea,Traffic Accident,02:18,Police
+2026-02-09,Downtown,Noise Complaint,06:58,Police
+2026-02-09,Station,Traffic Accident,07:21,Police
+2026-02-09,Station,Medical Emergency,08:25,Medical
+2026-02-09,North Loop,Traffic Accident,13:13,Police
+2026-02-09,Downtown,Theft,13:31,Police
+2026-02-09,Bel Air,Medical Emergency,16:14,Medical
+2026-02-09,Station,Fire,16:51,Fire
+2026-02-09,Brookhaven,Medical Emergency,19:04,Medical
+2026-02-09,Downtown,Theft,19:06,Police
+2026-02-10,Brookhaven,Noise Complaint,03:56,Police
+2026-02-10,Brookhaven,Theft,04:18,Police
+2026-02-10,North Loop,Medical Emergency,06:47,Medical
+2026-02-10,Chelsea,Traffic Accident,06:59,Police
+2026-02-10,Central,Welfare Check,08:02,Medical
+2026-02-10,Bel Air,Traffic Accident,08:03,Police
+2026-02-10,Brookhaven,Noise Complaint,08:16,Police
+2026-02-10,Central,Traffic Accident,08:37,Police
+2026-02-10,Brookhaven,Medical Emergency,09:33,Medical
+2026-02-10,North Loop,Noise Complaint,10:19,Police
+2026-02-10,Downtown,Welfare Check,13:28,Medical
+2026-02-10,Brookhaven,Theft,14:19,Police
+2026-02-10,Bel Air,Medical Emergency,15:35,Medical
+2026-02-10,Chelsea,Noise Complaint,18:52,Police
+2026-02-11,North Loop,Fire,03:44,Fire
+2026-02-11,Chelsea,Disturbance,04:03,Police
+2026-02-11,Station,Medical Emergency,06:21,Medical
+2026-02-11,Brookhaven,Theft,06:44,Police
+2026-02-11,Central,Fire,09:24,Fire
+2026-02-11,Brookhaven,Traffic Accident,09:48,Police
+2026-02-11,Station,Theft,09:54,Police
+2026-02-11,Station,Traffic Accident,12:27,Police
+2026-02-11,Central,Theft,12:41,Police
+2026-02-11,Bel Air,Welfare Check,14:52,Medical
+2026-02-11,Brookhaven,Medical Emergency,17:11,Medical
+2026-02-11,Downtown,Disturbance,18:27,Police
+2026-02-11,Bel Air,Theft,20:28,Police
+2026-02-11,Downtown,Medical Emergency,20:42,Medical
+2026-02-12,Brookhaven,Medical Emergency,08:49,Medical
+2026-02-12,Station,Fire,08:59,Fire
+2026-02-12,Central,Medical Emergency,09:02,Medical
+2026-02-12,Station,Noise Complaint,09:05,Police
+2026-02-12,Bel Air,Medical Emergency,09:45,Medical
+2026-02-12,North Loop,Medical Emergency,10:39,Medical
+2026-02-12,Bel Air,Medical Emergency,11:02,Medical
+2026-02-12,North Loop,Medical Emergency,12:41,Medical
+2026-02-12,Station,Theft,14:43,Police
+2026-02-12,Station,Noise Complaint,23:50,Police
+2026-02-13,Station,Welfare Check,05:35,Medical
+2026-02-13,Station,Traffic Accident,07:08,Police
+2026-02-13,Chelsea,Medical Emergency,07:12,Medical
+2026-02-13,Station,Traffic Accident,07:32,Police
+2026-02-13,Chelsea,Medical Emergency,08:00,Medical
+2026-02-13,Downtown,Noise Complaint,09:44,Police
+2026-02-13,Chelsea,Fire,10:52,Fire
+2026-02-13,Central,Noise Complaint,11:04,Police
+2026-02-13,Central,Medical Emergency,13:01,Medical
+2026-02-13,Brookhaven,Noise Complaint,16:14,Police
+2026-02-13,Brookhaven,Noise Complaint,18:16,Police
+2026-02-13,Brookhaven,Medical Emergency,21:56,Medical
+2026-02-13,Downtown,Medical Emergency,22:36,Medical
+2026-02-14,North Loop,Traffic Accident,02:30,Police
+2026-02-14,Brookhaven,Noise Complaint,05:27,Police
+2026-02-14,Station,Disturbance,08:07,Police
+2026-02-14,Bel Air,Noise Complaint,08:57,Police
+2026-02-14,Downtown,Theft,09:03,Police
+2026-02-14,Chelsea,Welfare Check,09:21,Medical
+2026-02-14,Chelsea,Welfare Check,09:21,Medical
+2026-02-14,Central,Traffic Accident,11:12,Police
+2026-02-14,Bel Air,Noise Complaint,14:25,Police
+2026-02-14,North Loop,Welfare Check,14:43,Medical
+2026-02-14,Brookhaven,Traffic Accident,15:50,Police
+2026-02-14,Brookhaven,Traffic Accident,17:54,Police
+2026-02-14,Brookhaven,Traffic Accident,19:14,Police
+2026-02-14,Downtown,Noise Complaint,20:09,Police
+2026-02-15,Central,Theft,03:29,Police
+2026-02-15,North Loop,Noise Complaint,03:35,Police
+2026-02-15,Brookhaven,Noise Complaint,06:44,Police
+2026-02-15,Central,Noise Complaint,09:23,Police
+2026-02-15,Central,Noise Complaint,09:28,Police
+2026-02-15,North Loop,Traffic Accident,09:33,Police
+2026-02-15,North Loop,Disturbance,12:22,Police
+2026-02-15,North Loop,Medical Emergency,12:30,Medical
+2026-02-15,Station,Theft,14:44,Police
+2026-02-15,Bel Air,Traffic Accident,15:33,Police
+2026-02-15,Chelsea,Noise Complaint,15:43,Police
+2026-02-15,Bel Air,Noise Complaint,17:20,Police
+2026-02-15,Bel Air,Welfare Check,17:44,Medical
+2026-02-15,Station,Noise Complaint,20:53,Police
+2026-02-15,Chelsea,Traffic Accident,22:56,Police
+2026-02-16,Brookhaven,Welfare Check,07:06,Medical
+2026-02-16,Downtown,Medical Emergency,07:21,Medical
+2026-02-16,Brookhaven,Theft,07:22,Police
+2026-02-16,Bel Air,Theft,08:50,Police
+2026-02-16,Central,Disturbance,11:08,Police
+2026-02-16,North Loop,Theft,12:56,Police
+2026-02-16,North Loop,Fire,13:44,Fire
+2026-02-16,Central,Welfare Check,15:20,Medical
+2026-02-16,Bel Air,Disturbance,16:39,Police
+2026-02-16,Brookhaven,Noise Complaint,17:53,Police
+2026-02-17,Bel Air,Traffic Accident,08:05,Police
+2026-02-17,Brookhaven,Noise Complaint,08:24,Police
+2026-02-17,Station,Fire,10:03,Fire
+2026-02-17,Station,Noise Complaint,10:57,Police
+2026-02-17,North Loop,Traffic Accident,11:02,Police
+2026-02-17,North Loop,Noise Complaint,12:29,Police
+2026-02-17,Bel Air,Theft,14:52,Police
+2026-02-17,Station,Noise Complaint,16:49,Police
+2026-02-17,Brookhaven,Welfare Check,17:43,Medical
+2026-02-17,Chelsea,Disturbance,17:46,Police
+2026-02-17,Downtown,Medical Emergency,18:03,Medical
+2026-02-17,Downtown,Theft,19:33,Police
+2026-02-17,Downtown,Medical Emergency,20:01,Medical
+2026-02-17,Downtown,Disturbance,23:02,Police
+2026-02-18,Brookhaven,Noise Complaint,00:49,Police
+2026-02-18,Brookhaven,Noise Complaint,08:01,Police
+2026-02-18,Station,Traffic Accident,08:12,Police
+2026-02-18,Chelsea,Noise Complaint,13:27,Police
+2026-02-18,North Loop,Disturbance,13:37,Police
+2026-02-18,Station,Theft,16:26,Police
+2026-02-18,Chelsea,Disturbance,16:46,Police
+2026-02-18,Bel Air,Theft,16:47,Police
+2026-02-18,Downtown,Theft,18:02,Police
+2026-02-18,Chelsea,Medical Emergency,19:05,Medical
+2026-02-18,Bel Air,Theft,19:36,Police
+2026-02-18,Station,Welfare Check,22:21,Medical
+2026-02-18,North Loop,Medical Emergency,23:47,Medical
+2026-02-19,Bel Air,Noise Complaint,01:09,Police
+2026-02-19,Central,Fire,05:06,Fire
+2026-02-19,Brookhaven,Medical Emergency,06:04,Medical
+2026-02-19,Central,Traffic Accident,11:39,Police
+2026-02-19,North Loop,Noise Complaint,12:31,Police
+2026-02-19,North Loop,Traffic Accident,12:57,Police
+2026-02-19,Brookhaven,Disturbance,15:00,Police
+2026-02-19,North Loop,Medical Emergency,15:38,Medical
+2026-02-19,Station,Traffic Accident,15:50,Police
+2026-02-19,Brookhaven,Fire,18:23,Fire
+2026-02-19,Chelsea,Noise Complaint,18:25,Police
+2026-02-19,Downtown,Disturbance,22:03,Police
+2026-02-19,Downtown,Traffic Accident,23:45,Police
+2026-02-20,Bel Air,Theft,04:50,Police
+2026-02-20,Chelsea,Theft,05:35,Police
+2026-02-20,Bel Air,Fire,06:15,Fire
+2026-02-20,Brookhaven,Noise Complaint,07:15,Police
+2026-02-20,North Loop,Medical Emergency,11:52,Medical
+2026-02-20,Central,Noise Complaint,12:08,Police
+2026-02-20,Central,Theft,13:01,Police
+2026-02-20,Downtown,Disturbance,13:13,Police
+2026-02-20,North Loop,Noise Complaint,14:31,Police
+2026-02-20,Chelsea,Theft,15:24,Police
+2026-02-20,Station,Welfare Check,16:53,Medical
+2026-02-20,Downtown,Theft,20:40,Police
+2026-02-21,Station,Medical Emergency,01:43,Medical
+2026-02-21,Central,Traffic Accident,02:35,Police
+2026-02-21,Station,Traffic Accident,05:44,Police
+2026-02-21,Chelsea,Fire,07:19,Fire
+2026-02-21,Bel Air,Medical Emergency,07:47,Medical
+2026-02-21,Station,Traffic Accident,07:49,Police
+2026-02-21,Bel Air,Medical Emergency,08:23,Medical
+2026-02-21,Central,Traffic Accident,09:19,Police
+2026-02-21,North Loop,Traffic Accident,11:38,Police
+2026-02-21,Central,Traffic Accident,11:46,Police
+2026-02-21,North Loop,Noise Complaint,11:46,Police
+2026-02-21,Station,Traffic Accident,11:50,Police
+2026-02-21,Brookhaven,Welfare Check,12:33,Medical
+2026-02-21,Central,Noise Complaint,14:33,Police
+2026-02-21,Brookhaven,Traffic Accident,15:22,Police
+2026-02-21,Chelsea,Traffic Accident,17:12,Police
+2026-02-21,Bel Air,Fire,17:25,Fire
+2026-02-21,Bel Air,Traffic Accident,17:37,Police
+2026-02-21,Station,Welfare Check,17:38,Medical
+2026-02-21,Central,Theft,18:37,Police
+2026-02-21,Downtown,Welfare Check,19:19,Medical
+2026-02-21,Downtown,Noise Complaint,22:17,Police
+2026-02-21,Bel Air,Medical Emergency,23:07,Medical
+2026-02-22,Station,Traffic Accident,04:48,Police
+2026-02-22,Chelsea,Disturbance,05:32,Police
+2026-02-22,Bel Air,Noise Complaint,08:22,Police
+2026-02-22,Chelsea,Medical Emergency,08:30,Medical
+2026-02-22,Chelsea,Noise Complaint,08:37,Police
+2026-02-22,Central,Medical Emergency,10:21,Medical
+2026-02-22,Central,Disturbance,13:11,Police
+2026-02-22,North Loop,Fire,14:45,Fire
+2026-02-22,Bel Air,Welfare Check,16:40,Medical
+2026-02-22,Downtown,Noise Complaint,17:29,Police
+2026-02-22,Chelsea,Disturbance,17:38,Police
+2026-02-22,Brookhaven,Disturbance,18:39,Police
+2026-02-23,Chelsea,Disturbance,07:26,Police
+2026-02-23,Central,Medical Emergency,08:48,Medical
+2026-02-23,Central,Welfare Check,10:56,Medical
+2026-02-23,Downtown,Medical Emergency,11:05,Medical
+2026-02-23,Downtown,Traffic Accident,12:14,Police
+2026-02-23,Downtown,Disturbance,12:30,Police
+2026-02-23,Bel Air,Traffic Accident,15:13,Police
+2026-02-23,Brookhaven,Disturbance,16:31,Police
+2026-02-23,Chelsea,Theft,17:33,Police
+2026-02-23,Downtown,Theft,18:02,Police
+2026-02-23,Downtown,Welfare Check,23:43,Medical
+2026-02-24,Bel Air,Medical Emergency,02:43,Medical
+2026-02-24,Station,Traffic Accident,05:27,Police
+2026-02-24,Brookhaven,Disturbance,08:13,Police
+2026-02-24,Chelsea,Medical Emergency,14:46,Medical
+2026-02-24,Station,Welfare Check,17:30,Medical
+2026-02-24,Bel Air,Medical Emergency,18:26,Medical
+2026-02-24,Chelsea,Disturbance,18:32,Police
+2026-02-24,Downtown,Noise Complaint,18:48,Police
+2026-02-24,Brookhaven,Medical Emergency,18:49,Medical
+2026-02-24,Downtown,Fire,19:17,Fire
+2026-02-24,Station,Medical Emergency,23:58,Medical
+2026-02-25,Bel Air,Noise Complaint,00:26,Police
+2026-02-25,North Loop,Medical Emergency,02:41,Medical
+2026-02-25,Bel Air,Medical Emergency,06:03,Medical
+2026-02-25,Chelsea,Theft,06:12,Police
+2026-02-25,Chelsea,Disturbance,07:32,Police
+2026-02-25,Central,Traffic Accident,10:57,Police
+2026-02-25,Central,Noise Complaint,13:07,Police
+2026-02-25,Chelsea,Theft,15:53,Police
+2026-02-25,Bel Air,Fire,16:04,Fire
+2026-02-25,Station,Theft,16:10,Police
+2026-02-25,Chelsea,Welfare Check,17:16,Medical
+2026-02-25,North Loop,Medical Emergency,18:55,Medical
+2026-02-25,Downtown,Welfare Check,21:37,Medical
+2026-02-26,Central,Medical Emergency,04:03,Medical
+2026-02-26,Chelsea,Theft,07:35,Police
+2026-02-26,Central,Traffic Accident,08:50,Police
+2026-02-26,North Loop,Theft,11:21,Police
+2026-02-26,Bel Air,Medical Emergency,11:30,Medical
+2026-02-26,North Loop,Theft,12:06,Police
+2026-02-26,Central,Disturbance,12:16,Police
+2026-02-26,Downtown,Noise Complaint,13:31,Police
+2026-02-26,North Loop,Theft,14:12,Police
+2026-02-26,North Loop,Noise Complaint,15:19,Police
+2026-02-26,Bel Air,Medical Emergency,16:26,Medical
+2026-02-26,Central,Theft,17:44,Police
+2026-02-26,Downtown,Noise Complaint,19:18,Police
+2026-02-26,Downtown,Traffic Accident,19:31,Police
+2026-02-27,Downtown,Noise Complaint,04:17,Police
+2026-02-27,Bel Air,Traffic Accident,06:17,Police
+2026-02-27,Station,Traffic Accident,06:49,Police
+2026-02-27,Chelsea,Medical Emergency,08:04,Medical
+2026-02-27,Brookhaven,Traffic Accident,08:18,Police
+2026-02-27,Brookhaven,Medical Emergency,10:52,Medical
+2026-02-27,Central,Medical Emergency,11:16,Medical
+2026-02-27,North Loop,Medical Emergency,13:31,Medical
+2026-02-27,Central,Disturbance,13:58,Police
+2026-02-27,Brookhaven,Fire,18:09,Fire
+2026-02-27,Brookhaven,Medical Emergency,19:51,Medical
+2026-02-27,Downtown,Theft,20:18,Police
+2026-02-27,Downtown,Medical Emergency,20:47,Medical
+2026-02-28,Bel Air,Traffic Accident,04:53,Police
+2026-02-28,Brookhaven,Noise Complaint,06:59,Police
+2026-02-28,Central,Welfare Check,07:39,Medical
+2026-02-28,Station,Theft,07:56,Police
+2026-02-28,Brookhaven,Fire,07:59,Fire
+2026-02-28,Bel Air,Traffic Accident,08:31,Police
+2026-02-28,Downtown,Traffic Accident,09:18,Police
+2026-02-28,Brookhaven,Fire,09:57,Fire
+2026-02-28,Central,Medical Emergency,13:54,Medical
+2026-02-28,Station,Theft,16:52,Police
+2026-02-28,Station,Medical Emergency,17:42,Medical
+2026-02-28,Chelsea,Traffic Accident,17:49,Police

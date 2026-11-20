@@ -2,6 +2,7 @@
 
 # Import Tkinter for the window and pandas for reading and grouping the data.
 from pathlib import Path
+import random
 import tkinter as tk
 from tkinter import ttk
 
@@ -28,14 +29,40 @@ locations = [
 # Create the main window and let the chart area expand when resized.
 window = tk.Tk()
 window.title("911 Call Analysis")
-window.geometry("1000x650")
-window.minsize(800, 500)
+window.geometry("1100x700")
+window.minsize(900, 550)
 window.columnconfigure(0, weight=1)
 window.rowconfigure(1, weight=1)
 
-# Add the project title across the top of the window.
-title = ttk.Label(window, text="911 Call Analysis", font=("Segoe UI", 22, "bold"))
-title.grid(row=0, column=0, sticky="w", padx=20, pady=15)
+# Make labels, buttons, and the incident table easier to read.
+style = ttk.Style(window)
+style.configure(".", font=("Segoe UI", 12))
+style.configure("TButton", padding=8)
+style.configure("Treeview", rowheight=30)
+style.configure("Treeview.Heading", font=("Segoe UI", 12, "bold"))
+plt.rcParams.update(
+    {
+        "font.size": 11,
+        "axes.titlesize": 15,
+        "axes.labelsize": 12,
+        "xtick.labelsize": 10,
+        "ytick.labelsize": 10,
+        "legend.fontsize": 10,
+    }
+)
+
+# Put the project title on the left and the author names on the right.
+header = ttk.Frame(window, padding=(20, 15))
+header.grid(row=0, column=0, sticky="ew")
+header.columnconfigure(0, weight=1)
+ttk.Label(header, text="911 Call Analysis", font=("Segoe UI", 26, "bold")).grid(
+    row=0, column=0, sticky="w"
+)
+ttk.Label(
+    header,
+    text="by Ketan Chowdhury and Sagnik Biswas",
+    font=("Segoe UI", 13),
+).grid(row=0, column=1, sticky="e")
 
 # Divide the window into a location sidebar and a chart area.
 main_area = ttk.Frame(window, padding=(20, 5, 20, 15))
@@ -49,13 +76,15 @@ sidebar.grid(row=0, column=0, sticky="ns")
 ttk.Label(sidebar, text="Choose a location:", font=("Segoe UI", 12, "bold")).grid(
     row=0, column=0, sticky="w", pady=(0, 8)
 )
-location_list = tk.Listbox(sidebar, height=10, exportselection=False)
+location_list = tk.Listbox(
+    sidebar, height=10, exportselection=False, font=("Segoe UI", 12)
+)
 location_list.grid(row=1, column=0, sticky="ew")
 for place in locations:
     location_list.insert(tk.END, place)
 location_list.selection_set(0)
 
-# Keep track of the selected location and which of the two charts is displayed.
+# Keep track of the selected location and which of the four charts is displayed.
 selected_location = ""
 chart_number = 0
 
@@ -78,21 +107,30 @@ chart_canvas.draw()
 # Display the current chart for the selected location using pyplot.
 def show_chart():
     location_calls = calls[calls["Location"] == selected_location].copy()
+    location_calls["Hour"] = pd.to_datetime(
+        location_calls["Call_Time"], format="%H:%M"
+    ).dt.hour
     plt.figure(figure.number)
     plt.clf()
 
     if chart_number == 0:
-        # Count each call type and draw the counts as a bar chart.
+        # Count call types, shuffle their display order, and draw a bar chart.
         counts = location_calls["Call_Type"].value_counts()
-        plt.bar(counts.index, counts.values, color="steelblue")
+        call_types = list(counts.index)
+        random.shuffle(call_types)
+        plt.bar(call_types, counts.reindex(call_types).values, color="steelblue")
         plt.title("Calls by Type in " + selected_location)
         plt.xlabel("Type of incident")
         plt.ylabel("Number of calls")
         plt.xticks(rotation=25, ha="right")
-    else:
+    elif chart_number == 1:
         # Count incidents in each hour and draw the hourly counts as a line chart.
-        hours = pd.to_datetime(location_calls["Call_Time"], format="%H:%M").dt.hour
-        counts = hours.value_counts().reindex(range(24), fill_value=0).sort_index()
+        counts = (
+            location_calls["Hour"]
+            .value_counts()
+            .reindex(range(24), fill_value=0)
+            .sort_index()
+        )
         plt.plot(counts.index, counts.values, marker="o", color="darkorange")
         plt.title("Calls by Hour in " + selected_location)
         plt.xlabel("Hour of day")
@@ -100,11 +138,47 @@ def show_chart():
         plt.xticks(range(0, 24, 2))
         plt.xlim(0, 23)
         plt.grid(True, alpha=0.3)
+    elif chart_number == 2:
+        # Count each dispatched service by hour and draw one line per service.
+        service_counts = location_calls.groupby(
+            ["Hour", "Service_Dispatched"]
+        ).size().unstack(fill_value=0)
+        service_counts = service_counts.reindex(range(24), fill_value=0)
+        service_counts = service_counts.reindex(
+            columns=["Police", "Medical", "Fire"], fill_value=0
+        )
+        service_counts.plot(ax=plt.gca(), marker="o")
+        plt.title("Services Dispatched by Hour in " + selected_location)
+        plt.xlabel("Hour of day")
+        plt.ylabel("Number of dispatches")
+        plt.xticks(range(0, 24, 2))
+        plt.xlim(0, 23)
+        plt.grid(True, alpha=0.3)
+        plt.legend(title="Service")
+    else:
+        # Group service counts into four parts of the day and draw grouped bars.
+        periods = ["Night", "Morning", "Afternoon", "Evening"]
+        location_calls["Time_Period"] = pd.cut(
+            location_calls["Hour"], bins=[-1, 5, 11, 17, 23], labels=periods
+        )
+        grouped_counts = location_calls.groupby(
+            ["Time_Period", "Service_Dispatched"], observed=False
+        ).size().unstack(fill_value=0)
+        grouped_counts = grouped_counts.reindex(index=periods, fill_value=0)
+        grouped_counts = grouped_counts.reindex(
+            columns=["Police", "Medical", "Fire"], fill_value=0
+        )
+        grouped_counts.plot(kind="bar", ax=plt.gca())
+        plt.title("Service Dispatches by Time Period in " + selected_location)
+        plt.xlabel("Time period")
+        plt.ylabel("Number of dispatches")
+        plt.xticks(rotation=0)
+        plt.legend(title="Service")
 
     # Fit the chart into the available space and redraw it in the GUI.
     plt.tight_layout()
     chart_heading.configure(
-        text=f"Chart {chart_number + 1} of 2 - {selected_location}"
+        text=f"Chart {chart_number + 1} of 4 - {selected_location}"
     )
     chart_canvas.draw()
 
@@ -112,14 +186,14 @@ def show_chart():
 # Move to the next chart, wrapping around to the first chart when needed.
 def next_chart():
     global chart_number
-    chart_number = (chart_number + 1) % 2
+    chart_number = (chart_number + 1) % 4
     show_chart()
 
 
 # Move to the previous chart, wrapping around to the last chart when needed.
 def previous_chart():
     global chart_number
-    chart_number = (chart_number - 1) % 2
+    chart_number = (chart_number - 1) % 4
     show_chart()
 
 
@@ -135,7 +209,7 @@ next_button = ttk.Button(
 )
 next_button.grid(row=0, column=1, padx=5)
 
-# Show a progress dialog for five seconds, with uneven progress updates.
+# Show a two-second progress dialog with uneven progress updates.
 def analyze():
     global selected_location, chart_number
     selection = location_list.curselection()
@@ -154,11 +228,11 @@ def analyze():
         padx=20, pady=(20, 10)
     )
     progress = ttk.Progressbar(
-        loading_window, maximum=100, mode="determinate", length=300
+        loading_window, maximum=100, mode="determinate", length=180
     )
     progress.pack(padx=20, pady=(0, 20))
 
-    # Finish the analysis when the five-second progress sequence is complete.
+    # Finish the analysis when the two-second progress sequence is complete.
     def finish_analysis():
         progress["value"] = 100
         loading_window.destroy()
@@ -167,31 +241,81 @@ def analyze():
         next_button.configure(state="normal")
         show_chart()
 
-    # Use different progress values and delays to make the loading feel natural.
-    progress_values = [5, 14, 22, 37, 44, 61, 73, 81, 96]
-    progress_delays = [300, 450, 650, 400, 700, 450, 800, 550, 700]
+    # Use uneven steps that add up to two seconds.
+    progress_steps = [(8, 250), (24, 350), (51, 400), (72, 450), (94, 550)]
 
     # Update the progress bar after each delay without blocking the GUI.
     def update_progress(step=0):
-        progress["value"] = progress_values[step]
-        if step == len(progress_values) - 1:
-            loading_window.after(progress_delays[step], finish_analysis)
+        value, delay = progress_steps[step]
+        progress["value"] = value
+        if step == len(progress_steps) - 1:
+            loading_window.after(delay, finish_analysis)
         else:
-            loading_window.after(
-                progress_delays[step], lambda: update_progress(step + 1)
-            )
+            loading_window.after(delay, lambda: update_progress(step + 1))
 
     update_progress()
+
+
+# Open a spreadsheet-like window showing all incidents at the selected location.
+def show_incident_table():
+    selection = location_list.curselection()
+    if not selection:
+        return
+
+    location = location_list.get(selection[0])
+    location_calls = calls[calls["Location"] == location]
+    table_window = tk.Toplevel(window)
+    table_window.title(f"Incidents in {location}")
+    table_window.geometry("850x420")
+    table_window.minsize(600, 300)
+    table_window.columnconfigure(0, weight=1)
+    table_window.rowconfigure(0, weight=1)
+
+    # Create a resizable table with headings for each CSV column.
+    table_frame = ttk.Frame(table_window, padding=10)
+    table_frame.grid(row=0, column=0, sticky="nsew")
+    table_frame.columnconfigure(0, weight=1)
+    table_frame.rowconfigure(0, weight=1)
+    columns = ["Date", "Location", "Call_Type", "Call_Time", "Service_Dispatched"]
+    incident_table = ttk.Treeview(
+        table_frame, columns=columns, show="headings"
+    )
+    for column in columns:
+        incident_table.heading(column, text=column.replace("_", " "))
+        incident_table.column(column, width=145, anchor="w")
+
+    # Add vertical and horizontal scrollbars for browsing all incident rows.
+    vertical_scroll = ttk.Scrollbar(
+        table_frame, orient="vertical", command=incident_table.yview
+    )
+    horizontal_scroll = ttk.Scrollbar(
+        table_frame, orient="horizontal", command=incident_table.xview
+    )
+    incident_table.configure(
+        yscrollcommand=vertical_scroll.set,
+        xscrollcommand=horizontal_scroll.set,
+    )
+    incident_table.grid(row=0, column=0, sticky="nsew")
+    vertical_scroll.grid(row=0, column=1, sticky="ns")
+    horizontal_scroll.grid(row=1, column=0, sticky="ew")
+
+    # Fill the table with the selected location's incident records.
+    for incident in location_calls.itertuples(index=False, name=None):
+        incident_table.insert("", tk.END, values=incident)
 
 
 # Place the Analyze button beneath the list of locations.
 analyze_button = ttk.Button(sidebar, text="Analyze", command=analyze)
 analyze_button.grid(row=2, column=0, sticky="ew", pady=(10, 0))
+table_button = ttk.Button(
+    sidebar, text="View Incident Table", command=show_incident_table
+)
+table_button.grid(row=3, column=0, sticky="ew", pady=(8, 0))
 
 # Show how many fictional records were loaded from the CSV.
 status = ttk.Label(
     window,
-    text=f"Loaded {len(calls)} fictional incidents from the CSV file.",
+    text=f"Loaded {len(calls)} incidents from the CSV file.",
     padding=(20, 8),
     anchor="w",
 )
